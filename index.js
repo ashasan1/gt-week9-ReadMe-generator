@@ -8,7 +8,7 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        message: "What is your Github Username?",
+        message: "Please enter your Github username.",
         name: "gitUsername",
     }, 
     {
@@ -18,7 +18,7 @@ const questions = [
     }, 
     {
         type: 'input',
-        message: "What is the name of your project?",
+        message: "What is the title of your project?",
         name: "projectName",
     },
     {
@@ -26,7 +26,39 @@ const questions = [
         message: "What is the description of your project?",
         name: "description",
 
-    }];
+    },
+    {
+        type: 'input',
+        message: "What are the installation instructions?",
+        name: "installation",
+
+    },
+    {
+        type: 'input',
+        message: "What is the usage information for your project?",
+        name: "usage",
+
+    },
+    {
+        type: 'input',
+        message: "What are your contribution guidelines?",
+        name: "contribution",
+
+    },
+    {
+        type: 'input',
+        message: "What are your test instructions?",
+        name: "test",
+
+    },
+    {
+        type: 'list',
+        message: "Pick a license.",
+        name: "licenseSpot",
+        choices: ["MIT","Apache 2.0 License","Boost Software License 1.0"],
+
+    },
+];
 
 console.log(questions)
 
@@ -42,14 +74,40 @@ function init() {}
 
 inquirer.prompt(questions).then((response) =>
 
- makeReadMe(`## Table of Contents
+ makeReadMe(
+`## Table of Contents
 # Title
     ${response.projectName}
+
+# License Badge: ${response.licenseSpot}
 
 # Description
     ${response.description}
 
- 
+# Table of Contents
+* Installation
+* Usage
+* Contributions
+* Test
+* Questions
+
+# Installation
+${response.installation}
+
+
+# Usage
+${response.usage}
+
+
+# Contributions
+    ${response.contribution}
+
+# Test
+    ${response.test}
+
+ # Questions
+
+ Github Username : https://github.com/${response.gitUsername}
  Email: ${response.email}
  `)
 
