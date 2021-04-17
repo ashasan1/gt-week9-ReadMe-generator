@@ -77,7 +77,7 @@ inquirer.prompt(questions).then((response) =>
  makeReadMe(
 `## Table of Contents
 # Title
-    ${response.projectName}
+   ## ${response.projectName}
 
 # License Badge: ${response.licenseSpot}
 
