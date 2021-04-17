@@ -55,7 +55,7 @@ const questions = [
         type: 'list',
         message: "Pick a license.",
         name: "licenseSpot",
-        choices: ["MIT","Apache 2.0 License","Boost Software License 1.0"],
+        choices: ["MIT","Apache 2.0 License","Boost Software License 1.0","None"],
 
     },
 ];
@@ -75,21 +75,23 @@ function init() {}
 inquirer.prompt(questions).then((response) =>
 
  makeReadMe(
-`## Table of Contents
+`
 # Title
    ## ${response.projectName}
 
-# License Badge: ${response.licenseSpot}
+
+
+   License Info: ${response.licenseSpot}
 
 # Description
     ${response.description}
 
 # Table of Contents
-* Installation
-* Usage
-* Contributions
-* Test
-* Questions
+* [Installation](# Installation)
+* [Usage](# Usage)
+* [Contributions](# Contributions)
+* [Test](# Test)
+* [Questions](# Questions)
 
 # Installation
 ${response.installation}
@@ -106,6 +108,8 @@ ${response.usage}
     ${response.test}
 
  # Questions
+
+ Feel free to reach out with any additional questions!
 
  Github Username : https://github.com/${response.gitUsername}
  Email: ${response.email}
