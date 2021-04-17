@@ -87,11 +87,11 @@ inquirer.prompt(questions).then((response) =>
     ${response.description}
 
 # Table of Contents
-* [Installation](# Installation)
-* [Usage](# Usage)
-* [Contributions](# Contributions)
-* [Test](# Test)
-* [Questions](# Questions)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributions](#Contributions)
+* [Test](#Test)
+* [Questions](#Questions)
 
 # Installation
 ${response.installation}

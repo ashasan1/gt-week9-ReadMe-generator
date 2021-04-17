@@ -10,11 +10,11 @@
     test
 
 # Table of Contents
-* [Installation](# Installation)
-* [Usage](# Usage)
-* [Contributions](# Contributions)
-* [Test](# Test)
-* [Questions](# Questions)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributions](#Contributions)
+* [Test](#Test)
+* [Questions](#Questions)
 
 # Installation
 test
